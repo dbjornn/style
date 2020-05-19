@@ -7,17 +7,30 @@
 >
 > --- Phil Karlton
 
-Variable and function names should use only lowercase letters, numbers, and `_`. 
-Use underscores (`_`) (so called snake case) to separate words within a name. 
+Variable and function names should only include letters and numbers. Symbols should be avoided.  
 
-```{r, eval = FALSE}
+Variable names should use small camel case.  
+
+```{r}
 # Good
-day_one
-day_1
+allData
+newTibble1
 
 # Bad
-DayOne
-dayone
+AllData # this looks too much like a Neuro-ID function
+new_tibble_1 # this includes symbols
+```
+
+Function names should use large camel case.  
+
+```{r}
+# Good
+CreatePlot
+GenerateReport
+
+# Bad
+createPlot # this looks too much like a variable
+generate_report # this includes symbols
 ```
 
 Base R uses dots in function names (`contrib.url()`) and class names 
@@ -33,10 +46,10 @@ Strive for names that are concise and meaningful (this is not easy!).
 
 ```{r, eval = FALSE}
 # Good
-day_one
+dayOne
 
 # Bad
-first_day_of_the_month
+firstDayOfTheMonth
 djm1
 ```
 
